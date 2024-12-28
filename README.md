@@ -64,13 +64,11 @@ OK, we're almost done! The final step is implementing your mock.
 class FixedClock implements Clock {
   private DateTime $time;
 
-  private function __construct(DateTime $time)
-  {
+  private function __construct(DateTime $time) {
     $this->time = $time;
   }
 
-  public static function setTo(DateTime $time)
-  {
+  public static function setTo(DateTime $time) {
     return new self($time);
   }
 
