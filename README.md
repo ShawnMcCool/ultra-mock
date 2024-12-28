@@ -68,8 +68,8 @@ class FixedClock implements Clock {
     $this->time = $time;
   }
 
-  public static function setTo(DateTime $time) {
-    return new self($time);
+  public static function setTo(string $timeString) {
+    return new self(new DateTime($timeString));
   }
 
   public function now(): DateTime {
