@@ -108,11 +108,9 @@ Now that we set up our Ultra Mocks, let's see how a test might function.
 ```PHP
 public function testSendsEmailOnRegistration() {
   $sendEmail = new SendEmailMock;
-
   $handler = new SendEmailOnRegistration($sendEmail);
 
   $userEmail = Email::fromAddress("shawn@mccool.email");
-
   $handler->handle(new UserWasRegistered(new User($userEmail)));
 
   $sendEmail->assertReceived($userEmail);
