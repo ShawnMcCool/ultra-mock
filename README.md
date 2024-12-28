@@ -85,7 +85,7 @@ What's a mock without expectations?! Ultra Mock has you covered.
 > Note: Ultra Mock is not only the simplest and most powerful mocking framework. But it's also completely compatible with any assertion framework you like.
 
 ```PHP
-class SendEmailMock implement SendEmail
+class SendEmailMock implements SendEmail
 {
   private Email $receivedEmail;
 
