@@ -22,7 +22,7 @@ Using Ultra Mock is simple. Start by identifying side-effects boundaries.
 
 We would like to mock the following class with Ultra Mock.
 
-> The following example is done in PHP, but Ultra Mock supports any class-based language.
+> The following example is done in PHP, but Ultra Mock supports any class-based language : [Python](PYTHON.md), Java, C#, JavaScript, etc.
 
 ```PHP
 class Clock
