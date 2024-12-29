@@ -32,18 +32,19 @@ class Clock:
         return datetime.now()
 ```
 
-Start by adding a Protocol.
+Start by adding an abstract class.
 
 ```python
+from abc import ABC, abstractmethod
 from datetime import datetime
-from typing import Protocol
 
-class Clock(Protocol):
+class Clock(ABC):
+    @abstractmethod
     def now(self) -> datetime:
-        ...
+        pass
 ```
 
-Now implement this new Protocol on your old class. Name your old class according to some property that is unique to its implementation. Try to be clever with the naming.
+Now implement this new abstract class on your old class. Name your old class according to some property that is unique to its implementation. Try to be clever with the naming.
 
 > Being clever is a sign that you're thinking about your situation in a unique way. It's fun to show your colleagues that you're not on auto-pilot! Don't worry, this gets easier with practice!
 
@@ -57,7 +58,7 @@ class SystemClock(Clock):
 
 OK, we're almost done! The final step is implementing your mock.
 
-> Note: Don't forget to make your life easier by implementing methods that aren't on the interface! Another great opportunity to be clever!
+> Note: Don't forget to make your life easier by implementing methods that aren't in the abstract class! Another great opportunity to be clever!
 
 ```python
 from datetime import datetime
